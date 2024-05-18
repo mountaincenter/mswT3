@@ -14,5 +14,24 @@ const config: StorybookConfig = {
     options: {},
   },
   staticDirs: ["../public"],
+  webpackFinal: async (config) => {
+    if (!config.module) {
+      config.module = { rules: [] };
+    }
+    if (!config.module.rules) {
+      config.module.rules = [];
+    }
+
+    config.module.rules.push({
+      test: /\.m?js$/,
+      type: "javascript/auto",
+      resolve: {
+        fullySpecified: false,
+      },
+    });
+
+    return config;
+  },
 };
+
 export default config;

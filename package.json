@@ -18,10 +18,12 @@
     "@trpc/react-query": "next",
     "@trpc/server": "next",
     "geist": "^1.3.0",
+    "msw": "^2.3.0",
     "next": "^14.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "server-only": "^0.0.1",
+    "strip-ansi": "6",
     "superjson": "^2.2.1",
     "zod": "^3.23.3"
   },
@@ -54,5 +56,11 @@
   "ct3aMetadata": {
     "initVersion": "7.33.1"
   },
-  "packageManager": "yarn@1.22.19"
+  "packageManager": "yarn@1.22.19",
+  "resolutions": {
+    "strip-ansi": "6.0.1",
+    "ansi-regex": "5.0.1",
+    "string-width": "4.2.3",
+    "cli-table3": "0.6.0"
+  }
 }
